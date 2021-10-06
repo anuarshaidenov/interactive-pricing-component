@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 0.9375rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  background-image: url("../images/bg-pattern.svg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: #fafbff;
+  padding: 0 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.heading-1 {
+  font-size: 1.37rem;
+  color: #293356;
+}
+
+.heading-2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #293356;
+}
+
+.heading-4 {
+  background-color: #feece7;
+  padding: 0.7em 1em;
+  border-radius: 30px;
+  color: #ff8c66;
+  font-size: 0.55rem;
+}
+
+.base-text {
+  color: #858fad;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.pageviews {
+  text-transform: uppercase;
+  color: #858fad;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.header__text, .header__heading {
+  z-index: 2;
+}
+
+.header__text {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.main-form {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.main-grid {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
+}
+
+.main-grid__pageviews {
+  text-align: center;
+}
+
+.main-grid__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.range-container {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  position: relative;
+}
+
+.progress-bar {
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  border-radius: 10px;
+  background: #a5f3eb;
+  top: 5px;
+}
+
+.range {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 50px;
+  width: 50px;
+  -webkit-transform: translateY(-42%);
+          transform: translateY(-42%);
+  border-radius: 50%;
+  background-color: #10d5c2;
+  background-image: url("../images/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+  -moz-box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+}
+
+.range::-moz-range-thumb {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #10d5c2;
+  background-image: url("../images/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  cursor: pointer;
+  border: none;
+  z-index: 3;
+  box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+  -moz-box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+}
+
+.range::-ms-thumb {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #10d5c2;
+  background-image: url("../images/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  cursor: pointer;
+  border: none;
+  z-index: 3;
+  box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+  -moz-box-shadow: 0px 20px 50px 0px rgba(16, 213, 194, 0.75);
+}
+
+.range:focus {
+  outline: none;
+}
+
+.range::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #eaeefb;
+}
+
+.range::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #eaeefb;
+}
+
+.range::-ms-track {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #eaeefb;
+}
+
+.range::-moz-range-progress {
+  height: 10px;
+  border-radius: 10px;
+  background: #a5f3eb;
+}
+
+.discount {
+  display: none;
+}
+
+.billing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding-left: 1.7rem;
+}
+
+.btn-switch {
+  outline: none;
+  width: 40px;
+  height: 23px;
+  border: none;
+  background-color: #cdd7ee;
+  border-radius: 50px;
+}
+
+.btn-switch__switch {
+  width: 40%;
+  height: 70%;
+  -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+  background-color: white;
+  display: block;
+  border-radius: 50%;
+}
+
+.start-trial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.start-trial__features {
+  text-align: center;
+}
+
+.start-trial__feature {
+  margin-bottom: 0.7rem;
+}
+
+.start-trial__feature p {
+  position: relative;
+  display: inline-block;
+}
+
+.start-trial__feature p::before {
+  position: absolute;
+  content: url("../images/icon-check.svg");
+  width: 10px;
+  height: 10px;
+  left: -22px;
+  display: block;
+}
+
+.start-trial__feature:last-of-type {
+  margin-bottom: 0;
+}
+
+.btn-cta {
+  border: none;
+  outline: none;
+  background: #293356;
+  color: #bdccff;
+  font-weight: 800;
+  padding: 1em 4.5em;
+  border-radius: 50px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+// ### Primary
+
+// - Soft Cyan (Full Slider Bar):
+$color-soft-cyan: hsl(174, 77%, 80%);
+// - Strong Cyan (Slider Backround)
+$color-strong-cyan: hsl(174, 86%, 45%);
+// - Light Grayish Red (Discount Background)
+$color-light-grayish-red: hsl(14, 92%, 95%);
+// - Light Red (Discount Text)
+$color-light-red: hsl(15, 100%, 70%);
+// - Pale Blue (CTA Text)
+$color-pale-blue: hsl(226, 100%, 87%);
+
+// ### Neutral
+
+// - White (Pricing Component Background)
+$color-white: hsl (0, 0%, 100%);
+// - Very Pale Blue (Main Background)
+$color-very-pale-blue: hsl(230, 100%, 99%);
+// - Light Grayish Blue (Empty Slider Bar)
+$color-light-grayish-blue: hsl(224, 65%, 95%);
+// - Light Grayish Blue (Toggle Background)
+$color-light-grayish-blue-2: hsl(223, 50%, 87%);
+// - Grayish Blue (Text)
+$color-grayish-blue: hsl(225, 20%, 60%);
+// - Dark Desaturated Blue (Text & CTA Background)
+$color-dark-desaturated-blue: hsl(227, 35%, 25%);
+
+// h1
+$font-heading-primary: 1.37rem;
+// h2
+$font-heading-secondary: 2rem;
+// h3
+$font-heading-tertiary: 1rem;
+
+$font-discount: 0.55rem;
+
+// base-text
+$font-base-text: 0.7rem;
+
+// Base font
+$font-base: 0.9375rem;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $font-base;
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  background-image: url("../images/bg-pattern.svg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: $color-very-pale-blue;
+  padding: 0 1rem;
+}
+
+ul {
+  list-style: none;
+}

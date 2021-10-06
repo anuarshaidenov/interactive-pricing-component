@@ -1,0 +1,32 @@
+.heading-1 {
+  font-size: $font-heading-primary;
+  color: $color-dark-desaturated-blue;
+}
+
+.heading-2 {
+  font-size: $font-heading-secondary;
+  font-weight: 800;
+  color: $color-dark-desaturated-blue;
+}
+
+.heading-4 {
+  background-color: $color-light-grayish-red;
+  padding: 0.7em 1em;
+  border-radius: 30px;
+  color: $color-light-red;
+  font-size: $font-discount;
+}
+
+.base-text {
+  color: $color-grayish-blue;
+  font-size: $font-base-text;
+  font-weight: 600;
+}
+
+.pageviews {
+  text-transform: uppercase;
+  color: $color-grayish-blue;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  font-weight: 800;
+}

@@ -1,0 +1,240 @@
+.header {
+  position: relative;
+  text-align: center;
+  padding: 5rem 0;
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.8;
+  }
+
+  &__text,
+  &__heading {
+    z-index: 2;
+  }
+
+  &__text {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+.main-form {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.main-grid {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
+
+  &__pageviews {
+    text-align: center;
+  }
+
+  &__amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+$range-height: 10px;
+$range-border-radius: 10px;
+.range-container {
+  grid-row: 2 / 3;
+  position: relative;
+}
+
+.progress-bar {
+  position: absolute;
+  width: 50%;
+  height: $range-height;
+  border-radius: $range-border-radius;
+  background: $color-soft-cyan;
+  top: 5px;
+}
+
+.range {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 50px;
+    width: 50px;
+    transform: translateY(-42%);
+    border-radius: 50%;
+    background-color: $color-strong-cyan;
+    background-image: url("../images/icon-slider.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    cursor: pointer;
+    z-index: 3;
+    box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    -webkit-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    -moz-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+  }
+
+  &::-moz-range-thumb {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: $color-strong-cyan;
+    background-image: url("../images/icon-slider.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    cursor: pointer;
+    border: none;
+    z-index: 3;
+    box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    -webkit-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    -moz-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+  }
+
+  &::-ms-thumb {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: $color-strong-cyan;
+    background-image: url("../images/icon-slider.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: center;
+    cursor: pointer;
+    border: none;
+    z-index: 3;
+    box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    -webkit-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    -moz-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: $range-height;
+    border-radius: $range-border-radius;
+    cursor: pointer;
+    background: $color-light-grayish-blue;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: $range-height;
+    border-radius: $range-border-radius;
+    cursor: pointer;
+    background: $color-light-grayish-blue;
+  }
+
+  &::-ms-track {
+    width: 100%;
+    height: $range-height;
+    border-radius: $range-border-radius;
+    cursor: pointer;
+    background: $color-light-grayish-blue;
+  }
+
+  &::-moz-range-progress {
+    height: $range-height;
+    border-radius: $range-border-radius;
+    background: $color-soft-cyan;
+  }
+}
+
+.discount {
+  display: none;
+}
+
+.billing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 1.7rem;
+}
+
+.btn-switch {
+  outline: none;
+  width: 40px;
+  height: 23px;
+  border: none;
+  background-color: $color-light-grayish-blue-2;
+  border-radius: 50px;
+
+  &__switch {
+    width: 40%;
+    height: 70%;
+    transform: translateX(3px);
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+  }
+}
+
+.start-trial {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  &__features {
+    text-align: center;
+  }
+
+  &__feature {
+    margin-bottom: 0.7rem;
+
+    p {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        position: absolute;
+        content: url("../images/icon-check.svg");
+        width: 10px;
+        height: 10px;
+        left: -22px;
+        display: block;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn-cta {
+  border: none;
+  outline: none;
+  background: $color-dark-desaturated-blue;
+  color: $color-pale-blue;
+  font-weight: 800;
+  padding: 1em 4.5em;
+  border-radius: 50px;
+}
