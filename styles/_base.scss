@@ -43,6 +43,9 @@ $font-base-text: 0.7rem;
 // Base font
 $font-base: 0.9375rem;
 
+// MEDIA
+$media-tablet: 768px;
+
 *,
 *::after,
 *::before {
@@ -51,17 +54,26 @@ $font-base: 0.9375rem;
   box-sizing: border-box;
 }
 
-body {
+html {
   font-size: $font-base;
+
+  @media only screen and (min-width: $media-tablet) {
+    font-size: 21px;
+  }
+}
+
+body {
   font-family: "Manrope", sans-serif;
 }
 
 .container {
   background-image: url("../images/bg-pattern.svg");
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 0 -10rem;
   background-color: $color-very-pale-blue;
   padding: 0 1rem;
+  background-repeat: no-repeat;
+  padding-bottom: 10rem;
 }
 
 ul {

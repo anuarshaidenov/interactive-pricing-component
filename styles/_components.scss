@@ -2,23 +2,24 @@
   position: relative;
   text-align: center;
   padding: 5rem 0;
+  z-index: 0;
 
   &__logo {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: -1;
     opacity: 0.8;
   }
 
   &__text,
   &__heading {
-    z-index: 2;
+    z-index: 5;
   }
 
   &__text {
-    width: 65%;
+    max-width: 10rem;
     margin: 0 auto;
   }
 }
@@ -26,6 +27,11 @@
 .main-form {
   display: grid;
   grid-gap: 2rem;
+
+  @media only screen and (min-width: $media-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
 }
 
 .main-grid {
@@ -36,8 +42,16 @@
   -webkit-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.75);
 
+  @media only screen and (min-width: $media-tablet) {
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+
   &__pageviews {
     text-align: center;
+    @media only screen and (min-width: $media-tablet) {
+      text-align: left;
+    }
   }
 
   &__amount {
@@ -45,6 +59,10 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+
+    @media only screen and (min-width: $media-tablet) {
+      justify-self: end;
+    }
   }
 }
 
@@ -53,15 +71,44 @@ $range-border-radius: 10px;
 .range-container {
   grid-row: 2 / 3;
   position: relative;
+
+  @media only screen and (min-width: $media-tablet) {
+    grid-column: 1 / -1;
+  }
 }
 
+// .progress-bar {
+//   display: block;
+//   position: absolute;
+//   width: 50%;
+//   height: $range-height;
+//   border-radius: $range-border-radius;
+//   background: $color-soft-cyan;
+//   top: 5px;
+
+//   @media only screen and (min-width: $media-tablet) {
+//     grid-column: 1 / -1;
+//     top: 12px;
+//   }
+// }
+
 .progress-bar {
+  display: block;
   position: absolute;
   width: 50%;
   height: $range-height;
   border-radius: $range-border-radius;
   background: $color-soft-cyan;
   top: 5px;
+
+  @media only screen and (min-width: $media-tablet) {
+    grid-column: 1 / -1;
+    top: 12px;
+  }
+
+  @-moz-document url-prefix() {
+    display: none;
+  }
 }
 
 .range {
@@ -85,6 +132,10 @@ $range-border-radius: 10px;
     box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
     -webkit-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
     -moz-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    &:active {
+      background-color: darken($color-strong-cyan, 10%);
+      cursor: grabbing;
+    }
   }
 
   &::-moz-range-thumb {
@@ -102,6 +153,10 @@ $range-border-radius: 10px;
     box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
     -webkit-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
     -moz-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    &:active {
+      background-color: darken($color-strong-cyan, 10%);
+      cursor: grabbing;
+    }
   }
 
   &::-ms-thumb {
@@ -119,6 +174,10 @@ $range-border-radius: 10px;
     box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
     -webkit-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
     -moz-box-shadow: 0px 20px 50px 0px rgba($color-strong-cyan, 0.75);
+    &:active {
+      background-color: darken($color-strong-cyan, 10%);
+      cursor: grabbing;
+    }
   }
 
   &:focus {
@@ -168,6 +227,10 @@ $range-border-radius: 10px;
 
 .discount {
   display: none;
+
+  @media only screen and (min-width: $media-tablet) {
+    display: block;
+  }
 }
 
 .billing {
@@ -176,6 +239,11 @@ $range-border-radius: 10px;
   align-items: center;
   gap: 0.5rem;
   padding-left: 1.7rem;
+
+  @media only screen and (min-width: $media-tablet) {
+    grid-column: 1 / -1;
+    padding-left: 4.7rem;
+  }
 }
 
 .btn-switch {
@@ -185,14 +253,24 @@ $range-border-radius: 10px;
   border: none;
   background-color: $color-light-grayish-blue-2;
   border-radius: 50px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-soft-cyan;
+    cursor: pointer;
+  }
 
   &__switch {
-    width: 40%;
-    height: 70%;
+    width: 45%;
+    height: 75%;
     transform: translateX(3px);
     background-color: white;
     display: block;
     border-radius: 50%;
+    transition: all 0.2s;
+    @media only screen and (max-width: 360px) {
+      height: 65%;
+    }
   }
 }
 
@@ -202,8 +280,19 @@ $range-border-radius: 10px;
   gap: 2rem;
   align-items: center;
 
+  @media only screen and (min-width: $media-tablet) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   &__features {
     text-align: center;
+
+    @media only screen and (min-width: $media-tablet) {
+      text-align: left;
+      padding-left: 1rem;
+    }
   }
 
   &__feature {
@@ -237,4 +326,11 @@ $range-border-radius: 10px;
   font-weight: 800;
   padding: 1em 4.5em;
   border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: white;
+    transform: translateY(-3px);
+  }
 }

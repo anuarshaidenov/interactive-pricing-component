@@ -37,14 +37,16 @@
         </p>
       </header>
       <main class="main-grid">
-        <form action="post" class="main-form">
-          <p class="pageviews main-grid__pageviews">100K Pageviews</p>
-          <h2 class="heading-2 main-grid__amount">
-            $16.00 <span class="base-text">/ month</span>
+        <form action="/" class="main-form">
+          <p class="pageviews main-grid__pageviews" id="pageviews">
+            100K Pageviews
+          </p>
+          <h2 class="heading-2 main-grid__amount" id="price">
+            $16.00 <span class="base-text" id="per">/ month</span>
           </h2>
           <div class="range-container">
             <div class="progress-bar"></div>
-            <input type="range" min="0" max="100" class="range" />
+            <input type="range" min="0" max="100" step="25" class="range" />
           </div>
           <div class="billing">
             <p class="base-text">Monthly Billing</p>
