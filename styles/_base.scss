@@ -41,7 +41,7 @@ $font-discount: 0.55rem;
 $font-base-text: 0.7rem;
 
 // Base font
-$font-base: 0.9375rem;
+$font-base: 18px;
 
 // MEDIA
 $media-tablet: 768px;
@@ -69,7 +69,7 @@ body {
 .container {
   background-image: url("../images/bg-pattern.svg");
   background-size: cover;
-  background-position: 0 -10rem;
+  background-position: 0 -18rem;
   background-color: $color-very-pale-blue;
   padding: 0 1rem;
   background-repeat: no-repeat;
