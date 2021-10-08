@@ -21,6 +21,11 @@
   &__text {
     max-width: 10rem;
     margin: 0 auto;
+    @media only screen and (min-width: $media-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      max-width: 100%;
+    }
   }
 }
 
