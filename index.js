@@ -9,10 +9,10 @@ const btnSwitch = document.querySelector(".btn-switch");
 const swtch = document.querySelector(".btn-switch__switch");
 let isOn = false;
 
-/* Percentage formula = price * (25/100) */
+/* Percentage formula = price * (75/100) */
 
 const calcYearly = function (num) {
-  return parseFloat(parseFloat(num) * (25 / 100));
+  return parseFloat(parseFloat(num) * (75 / 100));
 };
 
 inputRange.addEventListener("input", function () {
